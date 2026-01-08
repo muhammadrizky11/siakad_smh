@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>{judul}</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="{sumber}/template/adminlte3/plugins/fontawesome-free/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- Theme style -->
+    <link
+      rel="stylesheet"
+      href="{sumber}/template/adminlte3/dist/css/adminlte.min.css"
+    />
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{sumber}/template/vendors/jquery/jquery.min.js"></script>
+    <script src="{sumber}/template/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </head>
+
+  <body
+    class="hold-transition sidebar-mini sidebar-collapse layout-fixed"
+    onload="{diload}"
+  >
+    <!-- Site wrapper -->
+    <div class="wrapper">
+      <!-- Navbar -->
+      <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-widget="pushmenu" href="#" role="button"
+              ><i class="fas fa-bars"></i
+            ></a>
+          </li>
+        </ul>
+
+        <!-- SEARCH FORM -->
+        <form class="form-inline ml-3">
+          <div class="input-group input-group-sm">Administrator</div>
+        </form>
+
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link" data-toggle="dropdown" href="#">
+              <i class="far fa-bell"></i>
+              <span class="badge badge-warning navbar-badge">{i_loker}</span>
+            </a>
+            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+              <a
+                href="{sumber}/adm/h/entri.php"
+                class="dropdown-item"
+                title="User Entri"
+                ><i class="fa fa-tasks"></i> {i_loker1} User Entri</a
+              >
+
+              <a
+                href="{sumber}/adm/h/login.php"
+                class="dropdown-item"
+                title="User Login"
+                ><i class="fa fa-users"></i> {i_loker2} User Login</a
+              >
+
+              <a
+                href="{sumber}/adm/ps/history.php"
+                class="dropdown-item"
+                title="Presensi"
+                ><i class="fa fa-tachometer"></i> {i_loker3} Presensi</a
+              >
+
+              <a
+                href="{sumber}/adm/ab/absensi.php"
+                class="dropdown-item"
+                title="Absensi"
+                ><i class="fa fa-newspaper-o"></i> {i_loker4} Absensi</a
+              >
+
+              <a
+                href="{sumber}/adm/keu/tunggakan.php"
+                class="dropdown-item"
+                title="Tunggakan"
+                ><i class="fa fa-money"></i> {i_loker5} Tunggakan</a
+              >
+            </div>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{sumber}/logout.php" title="Keluar">
+              <i class="fa fa-sign-out"></i> KELUAR
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.navbar -->
+
+      <!-- Main Sidebar Container -->
+      <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <a href="{sumber}/adm/index.php" class="brand-link">
+          <img
+            src="{sumber}/img/logo.png?x={x}"
+            alt="ADMIN"
+            class="brand-image img-circle elevation-3"
+            style="opacity: 0.8"
+          />
+          <span class="brand-text font-weight-light">ADMIN</span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <ul
+              class="nav nav-pills nav-sidebar flex-column"
+              data-widget="treeview"
+              role="menu"
+              data-accordion="false"
+            >
+              <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+              <li class="nav-item">
+                <a href="{sumber}/adm/index.php" class="nav-link">
+                  <i class="nav-icon fas fa-home"></i>
+                  <p>BERANDA</p>
+                </a>
+              </li>
+
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fas fa-tachometer-alt"></i>
+                  <p>
+                    SETTING
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/s/pass.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Ganti Password</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-tasks"></i>
+                  <p>
+                    HISTORY
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/h/login.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>History Login</p>
+                    </a>
+                  </li>
+                </ul>
+
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/h/entri.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>History Entri</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-briefcase"></i>
+                  <p>
+                    MASTER
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/m/tapel.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Data Tahun Pelajaran</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/m/kelas.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Data Kelas</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/m/ruang.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Data Ruang</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/m/jenis.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Data Jenis Pelanggaran</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/m/pelanggaran.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Data Pelanggaran</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/m/pembinaan.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Data Pembinaan</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/m/prestasi.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Data Prestasi</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-users"></i>
+                  <p>
+                    USER AKSES
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/m/pegawai.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Data Pegawai</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/m/guru.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Data Guru Mapel</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/m/bk.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Data Guru BK</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/m/wk.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Data Wali Kelas</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/m/bendahara.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Data Bendahara</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/m/sarpras.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Data Sarpas</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/m/ks.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Data Kepala Sekolah</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/m/siswa.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Data Siswa</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/m/piket.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Data Piket</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-book"></i>
+                  <p>
+                    AKADEMIK
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/akad/mapel.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Data Mapel</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/akad/mapel_desc.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Deskripsi Mapel</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/akad/rpp_silabus.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>RPP dan Silabus</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-tasks"></i>
+                  <p>
+                    JADWAL
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/jw/jadwal.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Set Jadwal</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/jw/lap_mapel.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Mapel</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/jw/lap_guru.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Guru</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-clock-o"></i>
+                  <p>
+                    PIKET HARIAN
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ph/piket.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Petugas Piket</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ph/catatan.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Catatan Kejadian</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-tachometer"></i>
+                  <p>
+                    PRESENSI
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ps/waktu.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Set Waktu</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ps/presensi.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Entri Kehadiran</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a
+                      href="{sumber}/adm/ps/presensi_manual.php"
+                      class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Entri Manual Kehadiran</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ps/pulang.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Entri Pulang</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ps/pulang_manual.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Entri Manual Pulang</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ps/history.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>History Presensi</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ps/lap_telat.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Terlambat</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ps/lap_pulang.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Pulang</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ps/lap_tgl.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Tanggal</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ps/lap_bln.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Bulan</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ps/lap_thn.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Tahun</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ps/lap_siswa.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Siswa</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ps/lap_pegawai.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Pegawai</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-newspaper-o"></i>
+                  <p>
+                    ABSENSI
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ab/absensi.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Entri Absensi</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ab/lap_tgl.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Tanggal</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ab/lap_bln.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Bulan</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ab/lap_thn.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Tahun</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ab/lap_siswa.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Siswa</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ab/lap_pegawai.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Pegawai</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-balance-scale"></i>
+                  <p>
+                    PELANGGARAN
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/pl/pelanggaran.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Pelanggaran</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/pl/lap_tgl.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Tanggal</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/pl/lap_bln.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Bulan</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/pl/lap_thn.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Tahun</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/pl/lap_kelas.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Kelas</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a
+                      href="{sumber}/adm/pl/lap_pelanggaran.php"
+                      class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Pelanggaran</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-gears"></i>
+                  <p>
+                    PEMBINAAN
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/pb/belum.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Belum Dibina</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/pb/pembinaan.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Pembinaan</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/pb/lap_tgl.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Tanggal</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/pb/lap_bln.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Bulan</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/pb/lap_thn.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Tahun</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/pb/lap_kelas.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Kelas</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/pb/lap_pembinaan.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Pembinaan</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-trophy"></i>
+                  <p>
+                    PRESTASI
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/pt/prestasi.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Data Prestasi</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a
+                      href="{sumber}/adm/pt/prestasi_siswa.php"
+                      class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Prestasi Siswa</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/pt/lap_tgl.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Tanggal</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/pt/lap_bln.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Bulan</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/pt/lap_thn.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Tahun</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/pt/lap_kelas.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Kelas</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/pt/lap_prestasi.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Prestasi</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/pt/lap_siswa.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Siswa</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-suitcase"></i>
+                  <p>
+                    EKSTRA
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ek/ekstra.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Data Ekstra</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ek/ekstra_siswa.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Ekstra Siswa</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ek/lap_ekstra.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Ekstra</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/ek/lap_nilai.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Siswa</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-money"></i>
+                  <p>
+                    KEUANGAN SISWA
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/keu/item.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Item Pembayaran</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/keu/tunggakan.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Tunggakan</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/keu/nota.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Pembayaran</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/keu/history.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>History Bayar</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/keu/lunas.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lunas</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/keu/lap_tgl.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Tanggal</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/keu/lap_bln.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Bulan</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/keu/lap_thn.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Per Tahun</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-money"></i>
+                  <p>
+                    TABUNGAN SISWA
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/nabung/set.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Set Debet/Kredit/Saldo</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/nabung/siswa.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Entri Siswa</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a
+                      href="{sumber}/adm/nabung/lap_harian.php"
+                      class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Harian</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a
+                      href="{sumber}/adm/nabung/lap_bulanan.php"
+                      class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Lap. Bulanan</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-archive"></i>
+                  <p>
+                    INVENTARIS
+                    <i class="right fas fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/inv/m_brg.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Daftar Kode Barang</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/inv/sarpras.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>K.I.B</p>
+                    </a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a href="{sumber}/adm/inv/lap_rekap.php" class="nav-link"
+                      >&nbsp;&nbsp;
+                      <i class="fa fa-arrow-circle-right nav-icon"></i>
+                      <p>Per Rekap</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+      </aside>
+
+      <!-- Content Wrapper. Contains page content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <section class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-12">
+                <h1>{judulku}</h1>
+              </div>
+            </div>
+          </div>
+          <!-- /.container-fluid -->
+        </section>
+
+        <!-- Main content -->
+        <section class="content">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-12">
+                <!-- Default box -->
+                <div class="card">
+                  <div class="card-body">
+                    <!-- Bootstrap core JavaScript -->
+                    <script src="{sumber}/template/vendors/jquery/jquery.min.js"></script>
+                    <script src="{sumber}/template/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+                    {isi}
+                  </div>
+                  <!-- /.card-body -->
+                </div>
+                <!-- /.card -->
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- /.content -->
+      </div>
+      <!-- /.content-wrapper -->
+
+      <footer class="main-footer">
+        <div class="float-right d-none d-sm-block">
+          <b>{versi}</b>
+        </div>
+      </footer>
+
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+      </aside>
+      <!-- /.control-sidebar -->
+    </div>
+    <!-- ./wrapper -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"
+      charset="utf-8"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-tokenfield/0.12.0/css/tokenfield-typeahead.min.css"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-3-typeahead/4.0.2/bootstrap3-typeahead.min.js"
+      charset="utf-8"
+    ></script>
+
+    <script type="text/javascript">
+      $(function () {
+        $.noConflict();
+
+        $("#e_kode").typeahead({
+          source: function (query, result) {
+            $.ajax({
+              url: "{sumber}/adm/ps/i_cari_user.php",
+              method: "POST",
+              data: { query: query },
+              dataType: "json",
+              success: function (data) {
+                result(
+                  $.map(data, function (item) {
+                    return item;
+                  })
+                );
+              },
+            });
+          },
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $.noConflict();
+      });
+    </script>
+
+    <!-- jQuery -->
+    <script src="{sumber}/template/adminlte3/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="{sumber}/template/adminlte3/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AdminLTE App -->
+    <script src="{sumber}/template/adminlte3/dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="{sumber}/template/adminlte3/dist/js/demo.js"></script>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{sumber}/template/vendors/jquery/jquery.min.js"></script>
+    <script src="{sumber}/template/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
