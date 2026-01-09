@@ -16,7 +16,7 @@ $tpl = LoadTpl("template/cp_login.html");
 //nilai
 $filenya = "login.php";
 $filenya_ke = $sumber;
-$judul = "Login SISFOKOL";
+$judul = "Login Siakad";
 $judulku = $judul;
 $pesan = "Ada Kesalahan Username/Password. Silahkan Diperhatikan Lagi..!!";
 
