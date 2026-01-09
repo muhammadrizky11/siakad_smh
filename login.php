@@ -16,7 +16,7 @@ $tpl = LoadTpl("template/cp_login.html");
 //nilai
 $filenya = "login.php";
 $filenya_ke = $sumber;
-$judul = "Login Siakad";
+$judul = "Login SISFOKOL";
 $judulku = $judul;
 $pesan = "Ada Kesalahan Username/Password. Silahkan Diperhatikan Lagi..!!";
 
@@ -811,12 +811,17 @@ ob_start();
 <div class="card card-primary card-tabs">
 	<div class="card-body">
 		<div class="tab-content" id="custom-tabs-one-tabContent">
+			<p class="login-box-msg">SIAKAD SMH KOTA BONTANG</p>
 			<div class="tab-pane show active" id="custom-tabs-one-home" role="tabpanel" aria-labelledby="custom-tabs-one-home-tab">
 
 				<?php
-				echo '<form action="' . $filenya . '" method="post" name="formx">
-		<p> Pilih Tipe User :
-		<select name="tipe" class="btn btn-block btn-success" required>
+				//form login
+				echo
+				'<form action="' . $filenya . '" method="post" name="formx">
+		
+		Pilih Sebagai :
+		<br>
+		<select name="tipe" class="form-control mb-3" required>
 		<option value="" selected></option>
 		<option value="tp02">Siswa</option>
 		<option value="tp01">Guru Mapel</option>
@@ -828,32 +833,42 @@ ob_start();
 		<option value="tp04">Kepala Sekolah</option>
 		<option value="tp06">Administrator</option>
 		</select>
-		<br>
+		
+		
+		
 		
 		Username :
-		<br>
+		<div class="input-group mb-3">
 		<input name="usernamex" type="text" size="15" onKeyDown="var keyCode = event.keyCode;
 		if (keyCode == 13)
 			{
 			document.formx.btnOK.focus();
 			document.formx.btnOK.submit();
-			}" class="btn btn-block btn-success" required>
-		<br>
-		
+			}" class="form-control" required>
+		 <div class="input-group-append">
+		  <div class="input-group-text">
+			<span class="fas fa-user"></span>
+		  </div>
+		</div>
+		</div>
 		
 		Password :
 		<br>
+		<div class="input-group mb-3">
 		<input name="passwordx" type="password" size="15" onKeyDown="var keyCode = event.keyCode;
 		if (keyCode == 13)
 			{
 			document.formx.btnOK.focus();
 			document.formx.btnOK.submit();
-			}" class="btn btn-block btn-success" required>
-		<br>
-		
+			}" class="form-control" required>
+		 <div class="input-group-append">
+		  <div class="input-group-text">
+			<span class="fas fa-lock"></span>
+		  </div>
+		</div>
+		</div>
 		<input name="kd" type="hidden" value="' . $x . '">
-		<input name="btnOK" type="submit" value="login" class="btn btn-block btn-success">
-		</p>
+		<input name="btnOK" type="submit" value="Login" class="btn btn-block btn-success">
 		
 		
 		</form>';
