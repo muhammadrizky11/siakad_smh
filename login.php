@@ -215,19 +215,13 @@ if ($_POST['btnOK'])
 				$_SESSION['username1_session'] = $username;
 				$_SESSION['pass1_session'] = $password;
 				$_SESSION['janiskd'] = "admsw";
-
-
-
-
 				
 				//detail
 				$ku_yes = "SISWA";
 				$ku_kd = cegah($row['kd']);
 				$ku_kode = cegah($row['kode']);
 				$ku_nama = cegah($row['nama']);
-			
-					
-				
+						
 				
 				//insert
 				mysqli_query($koneksi, "INSERT INTO user_log_login(kd, user_kd, user_kode, user_nama, ".
